@@ -9,7 +9,11 @@
         <script src="scripts/common.js" ></script>
         <script src="scripts/jquery.stopwatch.js" ></script>
         <script src="scripts/jquery.mobile-1.2.0.js" ></script>
-        
+        <script>
+function goBack() {
+    window.history.back();
+}
+</script>
 
 
         <link rel="stylesheet" href="style/reset.css" type="text/css" />
@@ -32,11 +36,13 @@
 
         <div id="dashboard" class="">
 
-            <span class="dashboardBtn" id="menuBtn">
+            <span data-role="button"  data-iconpos="left" data-mini="true" data-inline="true" data-corners="true" data-wrapperels="span" data-shadow="true"  data-theme="b" class="ui-btn ui-shadow  ui-mini ui-btn-inline  ui-btn-up-b" style="
+    padding: 1%;" id="menuBtn" onclick="goBack()">
                 Home
             </span>
             &nbsp;
-            <span class="dashboardBtn" id="newGameBtn">ReStart</span>
+            <span data-role="button"  data-iconpos="left" data-mini="true" data-inline="true" data-corners="true" data-shadow="true"  data-wrapperels="span" data-theme="b" class="ui-btn ui-shadow  ui-mini ui-btn-inline ui-btn-up-b" style="
+    padding: 1%;" id="newGameBtn">Restart</span>
 
             <span id="flag">
                 <span id="flagUsed">0</span> / <span id="flagAvailable"></span>
